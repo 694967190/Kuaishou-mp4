@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快手视频提取工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>快手视频提取工具</h1>
+
+        <div class="input-group">
+            <label for="videoUrl">视频链接 (URL):</label>
+            <input type="text" id="videoUrl" placeholder="请输入快手短视频的URL">
+        </div>
+
+        <div class="input-group">
+            <label for="cookieInput">Cookie (可选):</label>
+            <textarea id="cookieInput" rows="3" placeholder="请输入您的快手Cookie (如果需要)"></textarea>
+        </div>
+
+        <button id="fetchButton">获取视频信息</button>
+
+        <div id="loadingIndicator" style="display:none;">
+            正在加载，请稍候...
+        </div>
+
+        <div id="resultArea">
+            <h2>视频信息:</h2>
+            <div id="videoPreviewContainer" style="display:none;">
+                <h3>视频预览:</h3>
+                <video id="videoPlayer" controls width="100%"></video>
+            </div>
+            <div id="videoLinksContainer">
+                <!-- 视频链接将在这里动态添加 -->
+            </div>
+            <div id="errorMessages" class="error-message">
+                <!-- 错误信息将在这里显示 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
